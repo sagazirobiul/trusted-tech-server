@@ -1,4 +1,4 @@
-# Trusted Tech
+# Trusted Tech Server
 
 **Technology:** React, Node.js, MongoDB
 
