@@ -78,6 +78,7 @@ client.connect(err => {
     .then(result => {
       res.send( result.deletedCount > 0)
     })
+
   })
 
 });
