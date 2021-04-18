@@ -57,6 +57,13 @@ client.connect(err => {
     })
   })
 
+  app.get('/admin', (req, res) => {
+    adminCollection.find({email: req.query.email})
+    .toArray((err,items) => {
+      res.send(items.length > 0)
+    })
+  })
+
   app.patch('/statusUpdate/:id', (req, res) => {
     orderCollection.updateOne({_id: ObjectId(req.params.id)},{
       $set: {status: req.body.status}
@@ -71,7 +78,6 @@ client.connect(err => {
     .then(result => {
       res.send( result.deletedCount > 0)
     })
-
   })
 
 });
