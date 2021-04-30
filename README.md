@@ -6,4 +6,4 @@
 
 **Live Link:** [Trusted Tech](https://trusted-tech.firebaseapp.com/)
 
-**Client Repo :** [T-shirts Galore](https://github.com/sagazirobiul/trusted-tech-client) 
+**Client Repo :** [Trusted Tech](https://github.com/sagazirobiul/trusted-tech-client) 
