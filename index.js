@@ -81,14 +81,14 @@ app.get('/admin', (req, res) => {
   })
 })
 
-// app.patch('/statusUpdate/:id', (req, res) => {
-//   orderCollection.updateOne({_id: ObjectId(req.params.id)},{
-//     $set: {status: req.body.status}
-//   })
-//   .then(result => {
-//     res.send( result.modifiedCount > 0)
-//   })
-// })
+app.patch('/statusUpdate/:id', (req, res) => {
+  orderCollection.updateOne({_id: ObjectId(req.params.id)},{
+    $set: {status: req.body.status}
+  })
+  .then(result => {
+    res.send( result.modifiedCount > 0)
+  })
+})
 
 // const handleUpdate = (route, collection, options) => {
 //   app.patch(route, (req, res) => {
@@ -123,15 +123,8 @@ app.patch('/updateReview/:id', (req, res) => {
   }
   handleDelete('/delete/:id', serviceCollection);
   handleDelete('/deleteReview/:id', reviewCollection);
-  // app.delete('/delete/:id', (req, res) => {
-  //   serviceCollection.deleteOne({_id: ObjectId(req.params.id)})
-  //   .then(result => {
-  //     res.send( result.deletedCount > 0)
-  //   })
-  // })
-
-
-
+  handleDelete('/deleteOrder/:id', orderCollection);
+  
 });
 
 app.get('/', (req, res) => {
