@@ -4,6 +4,7 @@ const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 const port = process.env.PORT || 5050;
+
 app.use(express.json());
 app.use(cors());
 require('dotenv').config(); 
@@ -64,6 +65,7 @@ client.connect(err => {
   }
   handleUpdate('/statusUpdate/:id', orderCollection);
   handleUpdate('/updateReview/:id', reviewCollection);
+  handleUpdate('/updateService/:id', serviceCollection);
 
 
   const handleDelete = (route, collection) => {
