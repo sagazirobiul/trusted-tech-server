@@ -4,6 +4,6 @@
 
 **Tools:** VSCode, Git, Firebase, Heroku.
 
-**Live Link:** [Trusted Tech](https://trusted-tech.firebaseapp.com/)
+###  `Website Link :` [Live Site](https://trusted-tech.firebaseapp.com/)
 
 **Client Repo :** [Trusted Tech](https://github.com/sagazirobiul/trusted-tech-client) 
